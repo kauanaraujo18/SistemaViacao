@@ -1,0 +1,177 @@
+body {
+    font-family: 'Poppins';
+    background-image: url('background_3_alterado.jpg');
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar {
+    width: 65px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, #38f712, #00ffd5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: width 0.3s;
+}
+
+.navbar:hover {
+    width: 130px;
+}
+
+.navbar a {
+    width: 100%;
+    text-align: left;
+    padding: 15px;
+    text-decoration: none;
+    color: black;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the icon */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar a .nav-text {
+    display: none;
+    margin-left: 10px;
+}
+
+.navbar:hover a .nav-text {
+    display: inline;
+}
+
+.navbar a:hover {
+    background-color: black;
+    color: rgb(0, 251, 4);
+}
+
+.navbar a i {
+    font-size: 24px; /* Adjust the icon size */
+}
+
+.navbar:hover a {
+    justify-content: flex-start; /* Align icons and text when navbar is expanded */
+}
+
+.login-container {
+    font-family: 'Poppins';
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 50px;
+    border-radius: 15px;
+    color: #fff;
+    width: 250px;
+    text-align: center;
+}
+
+input {
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+    width: 100%;
+    margin-bottom: 10px;
+    width: 220px;
+}
+
+button {
+    background-color: dodgerblue;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    border-radius: 10px;
+    color: white;
+    font-size: 15px;
+    width: 220px;
+}
+
+button:hover {
+    background-color: deepskyblue;
+    cursor: pointer;
+}
+
+/* PARTE DAS JANELAS */
+.draggable {
+    position: absolute;
+    background-color: white;
+    border: 2px solid black;
+    width: 750px;
+    height: 500px;
+    z-index: 9;
+    overflow-y: auto; /* Adiciona barra de rolagem vertical quando necessário */
+}
+
+.headerjanela {
+    padding: 10px;
+    cursor: move;
+    z-index: 10;
+    background-color: #1d00ae;
+    color: #fff;
+    display: flex;
+    justify-content: space-between; /* Adiciona este alinhamento */
+    align-items: center; /* Adiciona este alinhamento */
+}
+
+.close-btn {
+    cursor: pointer;
+    color: rgb(189, 189, 189);
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: 5px;
+}
+
+.botaoJanela {
+    display: block;
+    margin: 10px auto; /* Ajusta o espaçamento vertical e centraliza horizontalmente */
+    padding: 10px 20px; /* Ajusta o preenchimento interno do botão */
+    text-align: center; /* Garante que o texto no botão esteja centralizado */
+    background-color: black;
+    display: inline-block;
+    margin: 0 5px; /* Espaço entre os botões */
+    margin-top: 20px;
+}
+
+/* Estilo para os campos do formulário */
+.form-container {
+    padding: 20px; /* Adiciona espaçamento interno */
+}
+
+.form-container input {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    width: calc(100% - 22px);
+}
+
+.form-container label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.form-container button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: calc(100% - 22px);
+    margin-top: 20px;
+}
+
+.form-container button:hover {
+    background-color: #333;
+}

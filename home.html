@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style_teste_1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTTX5WzRH2Vr+S3JZ2h+QmFVqF3sgc5kPqQe3tMByxW1/Y1zXb8GzH+ud7b7ziWVff4y+O3Epg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Tela de login</title>
+</head>
+<body>
+    
+    <div class="navbar">
+        <a href="#" class="nav-item" id="homeBtn">
+            <i class="fas fa-home"></i>
+            <span class="nav-text">Home</span>
+        </a>
+        <a href="#" class="nav-item" id="cadastroBtn">
+            <i class="fas fa-user-plus"></i>
+            <span class="nav-text">Cadastros</span>
+        </a>
+        <a href="#" class="nav-item" id="agendaBtn">
+            <i class="fas fa-calendar-alt"></i>
+            <span class="nav-text">Agenda</span>
+        </a>
+        <a href="#" class="nav-item" id="escalasBtn">
+            <i class="fas fa-tasks"></i>
+            <span class="nav-text">Escalas</span>
+        </a>
+        <a href="#" class="nav-item" id="perfilBtn">
+            <i class="fas fa-user"></i>
+            <span class="nav-text">Meu Perfil</span>
+        </a>
+    </div>
+    
+    <div id="homeDiv" class="draggable" style="display: none;">
+        <div class="headerjanela">
+            Home
+            <span class="close-btn">x</span>
+        </div>
+        <button class="botaoJanela">Conteúdo</button>
+    </div>
+
+    <div id="cadastroDiv" class="draggable" style="display: none;">
+        <div class="headerjanela">
+            Cadastros
+            <span class="close-btn">x</span>
+        </div>
+        <button class="botaoJanela" id="motoristaBtn">Motorista</button>
+        <button class="botaoJanela" id="carroBtn">Carro</button>
+        <button class="botaoJanela" id="cidadeBtn">Cidade</button>
+    </div>
+
+    <div id="agendaDiv" class="draggable" style="display: none;">
+        <div class="headerjanela">
+            Agenda
+            <span class="close-btn">x</span>
+        </div>
+        <button class="botaoJanela" id="adicionarViagemBtn">Adicionar Viagem</button>
+    </div>
+    
+    <div id="escalasDiv" class="draggable" style="display: none;">
+        <div class="headerjanela">
+            Escalas
+            <span class="close-btn">x</span>
+        </div>
+        <p>Conteúdo</p>
+    </div>
+    <div id="perfilDiv" class="draggable" style="display: none;">
+        <div class="headerjanela">
+            Meu Perfil
+            <span class="close-btn">x</span>
+        </div>
+        <p>Conteúdo</p>
+    </div>
+
+    <div id="motoristaDiv" class="draggable" style="display: none;">
+        <div class="headerjanela">
+            Motorista
+            <span class="close-btn">x</span>
+        </div>
+        <form class="form-container">
+            <label for="codigo">Código</label>
+            <input type="text" id="codigo" name="codigo" required>
+            
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="cpf">CPF</label>
+            <input type="text" id="cpf" name="cpf" required>
+
+            <label for="rg">RG</label>
+            <input type="text" id="rg" name="rg" required>
+
+            <label for="data-nascimento">Data de Nascimento</label>
+            <input type="date" id="data-nascimento" name="data-nascimento" required>
+            
+            <button type="submit" class="botaoJanela">Enviar</button>
+        </form>
+    </div>
+
+    <div id="carroDiv" class="draggable" style="display: none;">
+        <div class="headerjanela">
+            Carro
+            <span class="close-btn">x</span>
+        </div>
+        <form class="form-container">
+            <label for="carroId">ID:</label>
+            <input type="text" id="carroId" name="carroId">
+    
+            <label for="carroMarca">Marca:</label>
+            <input type="text" id="carroMarca" name="carroMarca">
+    
+            <label for="carroModelo">Modelo:</label>
+            <input type="text" id="carroModelo" name="carroModelo">
+    
+            <label for="carroPlaca">Placa:</label>
+            <input type="text" id="carroPlaca" name="carroPlaca">
+    
+            <button type="submit" id="carroEnviarBtn">Enviar</button>
+        </form>
+    </div>
+
+    <div id="cidadeDiv" class="draggable" style="display: none;">
+        <div class="headerjanela">
+            Cidade
+            <span class="close-btn">x</span>
+        </div>
+        <form class="form-container">
+            <label for="cidadeId">ID:</label>
+            <input type="text" id="cidadeId" name="cidadeId">
+    
+            <label for="cidadeNome">Nome:</label>
+            <input type="text" id="cidadeNome" name="cidadeNome">
+    
+            <label for="cidadeEstado">Estado:</label>
+            <input type="text" id="cidadeEstado" name="cidadeEstado">
+    
+            <button type="submit" id="cidadeEnviarBtn">Enviar</button>
+        </form>
+    
+    </div>
+
+    <div id="adicionarViagemDiv" class="draggable" style="display: none;">
+        <div class="headerjanela">
+            Adicionar Viagem
+            <span class="close-btn">x</span>
+        </div>
+        <form class="form-container">
+            <label for="viagemId">ID:</label>
+            <input type="text" id="cidadeId" name="cidadeId">
+    
+            <label for="motoristaId">ID Motorista:</label>
+            <input type="text" id="cidadeNome" name="cidadeNome">
+    
+            <label for="carroId">ID Carro:</label>
+            <input type="text" id="cidadeEstado" name="cidadeEstado">
+    
+            <button type="submit" id="cidadeEnviarBtn">Enviar</button>
+        </form>
+    
+    </div>
+
+    <script>
+        // JavaScript para tornar as janelas arrastáveis
+        function makeDraggable(elementId) {
+            dragElement(document.getElementById(elementId));
+        }
+
+        function dragElement(elmnt) {
+            var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+            if (document.getElementById(elmnt.id + "header")) {
+                document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+            } else {
+                elmnt.onmousedown = dragMouseDown;
+            }
+
+            function dragMouseDown(e) {
+                e = e || window.event;
+                e.preventDefault();
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                document.onmouseup = closeDragElement;
+                document.onmousemove = elementDrag;
+            }
+
+            function elementDrag(e) {
+                e = e || window.event;
+                e.preventDefault();
+                pos1 = pos3 - e.clientX;
+                pos2 = pos4 - e.clientY;
+                pos3 = e.clientX;
+                pos4 = e.clientY;
+                elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+                elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+            }
+
+            function closeDragElement() {
+                document.onmouseup = null;
+                document.onmousemove = null;
+            }
+        }
+
+        // Inicializa todas as janelas arrastáveis
+        makeDraggable("homeDiv");
+        makeDraggable("cadastroDiv");
+        makeDraggable("agendaDiv");
+        makeDraggable("escalasDiv");
+        makeDraggable("perfilDiv");
+        makeDraggable("motoristaDiv");
+        makeDraggable("carroDiv");
+        makeDraggable("cidadeDiv");
+        makeDraggable("adicionarViagemDiv");
+
+        // Funções para abrir e fechar janelas
+        function toggleDisplay(buttonId, divId) {
+            document.getElementById(buttonId).onclick = function() {
+                const div = document.getElementById(divId);
+                div.style.display = div.style.display === "block" ? "none" : "block";
+            }
+        }
+
+        toggleDisplay("homeBtn", "homeDiv");
+        toggleDisplay("cadastroBtn", "cadastroDiv");
+        toggleDisplay("agendaBtn", "agendaDiv");
+        toggleDisplay("escalasBtn", "escalasDiv");
+        toggleDisplay("perfilBtn", "perfilDiv");
+        toggleDisplay("motoristaBtn", "motoristaDiv");
+        toggleDisplay("carroBtn", "carroDiv");
+        toggleDisplay("cidadeBtn", "cidadeDiv");
+        toggleDisplay("adicionarViagemBtn", "adicionarViagemDiv");
+
+        // Função para fechar janelas
+        document.querySelectorAll('.close-btn').forEach(button => {
+            button.onclick = function() {
+                this.parentElement.parentElement.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
